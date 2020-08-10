@@ -1,14 +1,19 @@
 <template>
-  <div class="pro_container">
-    <page-top :pro_inf="pro_inf_top"></page-top>
-    <page-center :pro_inf="pro_inf_center"></page-center>
-  </div>
+  <div>
+    <div class="pro_container">
+      <page-top :pro_inf="pro_inf_top"></page-top>
+      <page-center :pro_inf="pro_inf_center"></page-center>
+    </div>
+    <tab-bar></tab-bar>
+  </div>  
+  
 </template>
 
 <script>
 import {request} from '../../../network/axios'
 import PageTop from './proitempage/PageTop.vue'
 import PageCenter from './proitempage/pagecenter/PageCenter.vue'
+import TabBar from '../../common/tabbar/TabBar.vue'
 export default {
   name:'proqueryitem',
     data(){
@@ -31,7 +36,8 @@ export default {
   },
   components:{
     PageTop,
-    PageCenter
+    PageCenter,
+    TabBar
   }
 }
 </script>
